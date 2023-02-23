@@ -31,7 +31,7 @@ function Filme() {
     loadFilme()
 
     return () => {
-      console.log('desmontadoooooooo')
+      console.log('desmontado')
     }
   }, [navigate, id])
 
@@ -45,12 +45,12 @@ function Filme() {
     )
 
     if (hasFilme) {
-      toast.warn('Esse Filme Já Está Na Sua Lista!')
+      toast.warn('Esse filme já está na sua lista!')
       return
     }
     filmesSalvos.push(filme)
     localStorage.setItem('@primeflix', JSON.stringify(filmesSalvos))
-    toast.success('Filme Salvo Com Sucesso!')
+    toast.success('Filme salvo com sucesso!')
   }
 
   if (loading) {
